@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "SliderBarTagView.h"
+#import "TagView.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UISlider *sliderView;
+@property (strong,nonatomic) TagView *tagView;
 
 @end
 
@@ -16,12 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewDidAppear:(BOOL)animated{
+    self.tagView = [[TagView alloc] init];
+    [SliderBarTagView initWithSliderView:self.sliderView withTagView:self.tagView didScoroll:^(id sliderBarTagView, TagView * tagView) {
+    }];
 }
-
+- (IBAction)sliderValueChang:(id)sender {
+    self.tagView.displayLabel.text = [NSString stringWithFormat:@"%f",self.sliderView.value];
+}
 @end

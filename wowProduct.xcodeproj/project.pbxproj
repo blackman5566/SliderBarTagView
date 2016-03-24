@@ -15,6 +15,9 @@
 		2E92726F1CA37C8C002EEFBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E92726D1CA37C8C002EEFBB /* LaunchScreen.storyboard */; };
 		2E92727A1CA37C8C002EEFBB /* wowProductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9272791CA37C8C002EEFBB /* wowProductTests.m */; };
 		2E9272851CA37C8C002EEFBB /* wowProductUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9272841CA37C8C002EEFBB /* wowProductUITests.m */; };
+		2E9272941CA37F34002EEFBB /* SliderBarTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9272931CA37F34002EEFBB /* SliderBarTagView.m */; };
+		2E9272981CA38816002EEFBB /* TagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9272971CA38816002EEFBB /* TagView.m */; };
+		2E92729A1CA38839002EEFBB /* TagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9272991CA38839002EEFBB /* TagView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		2E9272801CA37C8C002EEFBB /* wowProductUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wowProductUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9272841CA37C8C002EEFBB /* wowProductUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wowProductUITests.m; sourceTree = "<group>"; };
 		2E9272861CA37C8C002EEFBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E9272921CA37F34002EEFBB /* SliderBarTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SliderBarTagView.h; path = ../SliderBarTagView.h; sourceTree = "<group>"; };
+		2E9272931CA37F34002EEFBB /* SliderBarTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SliderBarTagView.m; path = ../SliderBarTagView.m; sourceTree = "<group>"; };
+		2E9272961CA38816002EEFBB /* TagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagView.h; sourceTree = "<group>"; };
+		2E9272971CA38816002EEFBB /* TagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagView.m; sourceTree = "<group>"; };
+		2E9272991CA38839002EEFBB /* TagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		2E92725E1CA37C8C002EEFBB /* wowProduct */ = {
 			isa = PBXGroup;
 			children = (
+				2E9272951CA37F46002EEFBB /* SliderBarTagView */,
 				2E9272621CA37C8C002EEFBB /* AppDelegate.h */,
 				2E9272631CA37C8C002EEFBB /* AppDelegate.m */,
 				2E9272651CA37C8C002EEFBB /* ViewController.h */,
@@ -138,6 +147,18 @@
 				2E9272861CA37C8C002EEFBB /* Info.plist */,
 			);
 			path = wowProductUITests;
+			sourceTree = "<group>";
+		};
+		2E9272951CA37F46002EEFBB /* SliderBarTagView */ = {
+			isa = PBXGroup;
+			children = (
+				2E9272921CA37F34002EEFBB /* SliderBarTagView.h */,
+				2E9272931CA37F34002EEFBB /* SliderBarTagView.m */,
+				2E9272961CA38816002EEFBB /* TagView.h */,
+				2E9272971CA38816002EEFBB /* TagView.m */,
+				2E9272991CA38839002EEFBB /* TagView.xib */,
+			);
+			name = SliderBarTagView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +267,7 @@
 				2E92726F1CA37C8C002EEFBB /* LaunchScreen.storyboard in Resources */,
 				2E92726C1CA37C8C002EEFBB /* Assets.xcassets in Resources */,
 				2E92726A1CA37C8C002EEFBB /* Main.storyboard in Resources */,
+				2E92729A1CA38839002EEFBB /* TagView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9272941CA37F34002EEFBB /* SliderBarTagView.m in Sources */,
+				2E9272981CA38816002EEFBB /* TagView.m in Sources */,
 				2E9272671CA37C8C002EEFBB /* ViewController.m in Sources */,
 				2E9272641CA37C8C002EEFBB /* AppDelegate.m in Sources */,
 				2E9272611CA37C8C002EEFBB /* main.m in Sources */,
