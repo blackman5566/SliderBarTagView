@@ -15,17 +15,8 @@
         NSArray *arrayOfViews = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass([self class]) owner:self options:nil];
         self =arrayOfViews[0];
     }
-    
-    return self;
-}
-
-
--(id)initForomXib{
-    NSArray *arrayOfViews = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass([self class]) owner:self options:nil];
-    self =arrayOfViews[0];
-    if (self) {
-    
-    }
+    self.layer.borderWidth = 0.0f;
+    self.layer.cornerRadius = 5.0f;
     return self;
 }
 

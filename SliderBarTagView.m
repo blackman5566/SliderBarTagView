@@ -14,8 +14,6 @@
 @property (nonatomic,strong)UISlider *sliderView;
 @property (nonatomic,strong)UIView *tagView;
 @property (nonatomic,strong)UIImageView *sliderViewBarImageView;
-@property (nonatomic, assign) BOOL isStopHiddenAnimation;
-@property (nonatomic, assign) BOOL isAnimation;
 
 @end
 
@@ -29,7 +27,7 @@
         sliderBarTagView.sliderViewBarImageView = sliderView.subviews.lastObject;
         sliderBarTagView.scrollBlock = scrollblock;
         sliderBarTagView.tagView.alpha=0.0f;
-        sliderBarTagView.isAnimation = NO;
+        
         CGRect newFrame = tagView.frame;
         CGFloat fixedSpace = sliderView.frame.origin.y - CGRectGetHeight(tagView.frame);
         newFrame.origin.y = fixedSpace + 30;

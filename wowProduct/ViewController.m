@@ -26,9 +26,10 @@
 -(void)viewDidAppear:(BOOL)animated{
     self.tagView = [[TagView alloc] init];
     [SliderBarTagView initWithSliderView:self.sliderView withTagView:self.tagView didScoroll:^(id sliderBarTagView, TagView * tagView) {
+        // do something
     }];
 }
 - (IBAction)sliderValueChang:(id)sender {
-    self.tagView.displayLabel.text = [NSString stringWithFormat:@"%f",self.sliderView.value];
+    self.tagView.displayLabel.text = [NSString stringWithFormat:@"%d",(int)self.sliderView.value ];
 }
 @end
