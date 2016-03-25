@@ -45,7 +45,6 @@
     if ([keyPath isEqualToString:@"frame"]) {
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(tagViewHideAnimation) object:nil];
         [self performSelector:@selector(tagViewHideAnimation) withObject:nil afterDelay:0.5];
-        [self showLabel];
     }else if([keyPath isEqualToString:@"value"]){
         [self performSelector:@selector(tagViewShowAnimation) withObject:nil afterDelay:0];
     }
@@ -80,10 +79,6 @@
         }];
 }
 
--(void)showLabel{
-    self.scrollBlock(self,self.tagView);
-}
-
 -(void)convertFrame{
     CGPoint barImgViewConvertPoint = [self.sliderView convertPoint:self.sliderViewBarImageView.frame.origin toView:self.sliderView.superview];
     CGRect newFrame = self.tagView.frame;
@@ -93,6 +88,7 @@
     newFrame.origin.x = tagViewX;
     self.tagView.frame = newFrame;
 }
+
 -(void)dealloc{
     [self.sliderViewBarImageView removeObserver:self forKeyPath:@"frame"];
     [self.sliderView removeObserver:self forKeyPath:@"value"];
